@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -18,16 +18,16 @@
             line-height: 1.6;
             font-size: 18px;
         }
-        
+
         .container {
-            max-width: 1600px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 24px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-        
+
         /* Header */
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -35,30 +35,30 @@
             padding: 50px 40px;
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: clamp(2.5em, 5vw, 4em);
             margin-bottom: 20px;
             font-weight: 800;
             letter-spacing: -1px;
         }
-        
+
         .header .subtitle {
             font-size: clamp(1.2em, 3vw, 1.8em);
             opacity: 0.95;
             font-weight: 500;
             margin-bottom: 10px;
         }
-        
+
         .header .meta {
             font-size: 1.1em;
             opacity: 0.85;
         }
-        
+
         .content {
             padding: 50px 40px;
         }
-        
+
         /* Typography */
         h2 {
             font-size: clamp(2em, 4vw, 2.8em);
@@ -66,26 +66,340 @@
             margin-bottom: 30px;
             color: #1e3c72;
         }
-        
+
         h3 {
             font-size: clamp(1.5em, 3vw, 2em);
             font-weight: 700;
             margin-bottom: 20px;
             color: #2a5298;
         }
-        
+
         h4 {
             font-size: clamp(1.3em, 2.5vw, 1.6em);
             font-weight: 700;
             margin-bottom: 15px;
         }
-        
+
         p, li {
             font-size: 1.15em;
             line-height: 1.75;
             margin-bottom: 12px;
         }
-        
+
+        /* Johnstone's Triangle */
+        .johnstone-triangle {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .johnstone-triangle h3 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .three-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .level-card {
+            padding: 30px;
+            border-radius: 16px;
+            border: 4px solid;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .level-card.macro {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-color: #ff6b9d;
+        }
+
+        .level-card.micro {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-color: #4ecdc4;
+        }
+
+        .level-card.symbolic {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            border-color: #95e1d3;
+        }
+
+        .level-card h4 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+
+        .connection-box {
+            background: #fef3c7;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 6px solid #f59e0b;
+            margin-top: 25px;
+        }
+
+        .connection-box strong {
+            color: #d97706;
+            font-size: 1.3em;
+        }
+
+        /* Misconception Alert */
+        .misconception-alert {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 4px solid #dc2626;
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+
+        .misconception-alert h4 {
+            color: #dc2626;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .wrong {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 6px solid #dc2626;
+        }
+
+        .right {
+            background: #d1fae5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 6px solid #059669;
+        }
+
+        .evidence {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Worked Example */
+        .worked-example {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border: 4px solid #667eea;
+        }
+
+        .worked-example h3 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .problem {
+            background: #fef3c7;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 6px solid #f59e0b;
+        }
+
+        .expert-solution .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: #667eea;
+            font-size: 1.3em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .your-turn {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            border: 3px solid #059669;
+        }
+
+        .your-turn strong {
+            color: #065f46;
+            font-size: 1.3em;
+        }
+
+        /* Retrieval Practice */
+        .retrieval-check {
+            background: linear-gradient(135deg, #fae8ff 0%, #f3e8ff 100%);
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 4px solid #a855f7;
+        }
+
+        .retrieval-check h4 {
+            color: #7e22ce;
+            font-size: 1.7em;
+            margin-bottom: 20px;
+        }
+
+        .retrieval-check ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .retrieval-check li {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        details {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: #7e22ce;
+            font-size: 1.2em;
+            padding: 10px;
+        }
+
+        summary:hover {
+            background: #f3e8ff;
+            border-radius: 8px;
+        }
+
+        /* Confidence Scale */
+        .confidence-check {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            border: 3px solid #3b82f6;
+        }
+
+        .confidence-check h4 {
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .confidence-scale {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .confidence-scale button {
+            padding: 12px 20px;
+            border: 2px solid #3b82f6;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .confidence-scale button:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Engineering Lens */
+        .engineering-lens {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 4px solid #1e3c72;
+        }
+
+        .engineering-lens h4 {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .engineering-lens p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .engineering-lens strong {
+            color: #fbbf24;
+        }
+
+        /* Concrete-Pictorial-Abstract */
+        .cpa-sequence {
+            margin: 40px 0;
+        }
+
+        .concrete-start {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            border-left: 8px solid #ff6b9d;
+        }
+
+        .pictorial-connection {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            border-left: 8px solid #4ecdc4;
+        }
+
+        .abstract-representation {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 8px solid #059669;
+        }
+
         /* Week Navigation */
         .week-nav {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -94,18 +408,18 @@
             margin-bottom: 50px;
             text-align: center;
         }
-        
+
         .week-nav h2 {
             color: white;
             margin-bottom: 30px;
         }
-        
+
         .week-buttons {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
-        
+
         .week-btn {
             background: white;
             padding: 25px 20px;
@@ -114,24 +428,24 @@
             transition: transform 0.2s ease;
             cursor: pointer;
         }
-        
+
         .week-btn:hover {
             transform: translateY(-5px);
         }
-        
+
         .week-btn .week-number {
             font-size: 1.8em;
             font-weight: 800;
             color: #667eea;
             margin-bottom: 10px;
         }
-        
+
         .week-btn .week-title {
             font-size: 1.2em;
             font-weight: 600;
             color: #1e3c72;
         }
-        
+
         /* Week Sections */
         .week-section {
             margin-bottom: 80px;
@@ -139,23 +453,23 @@
             border-radius: 24px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        
+
         .week1 {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         }
-        
+
         .week2 {
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         }
-        
+
         .week3 {
             background: linear-gradient(135deg, #ffecd2 0%, #fce4ec 100%);
         }
-        
+
         .week4 {
             background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
         }
-        
+
         /* Concept Cards */
         .concept-grid {
             display: grid;
@@ -163,7 +477,7 @@
             gap: 25px;
             margin: 30px 0;
         }
-        
+
         .concept-card {
             background: white;
             padding: 30px;
@@ -171,33 +485,33 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             border-left: 6px solid;
         }
-        
+
         .concept-card.atoms {
             border-color: #ff6b9d;
         }
-        
+
         .concept-card.ionic {
             border-color: #4ecdc4;
         }
-        
+
         .concept-card.covalent {
             border-color: #95e1d3;
         }
-        
+
         .concept-card.reaction {
             border-color: #f7b731;
         }
-        
+
         .concept-card.energy {
             border-color: #fc5c65;
         }
-        
+
         .concept-card h4 {
             color: #1e3c72;
             margin-bottom: 15px;
             font-size: 1.5em;
         }
-        
+
         /* Visual Diagrams */
         .diagram-box {
             background: white;
@@ -206,12 +520,12 @@
             margin: 30px 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
-        
+
         .diagram-box h3 {
             text-align: center;
             margin-bottom: 25px;
         }
-        
+
         .atom-diagram {
             display: flex;
             justify-content: space-around;
@@ -219,11 +533,11 @@
             flex-wrap: wrap;
             gap: 30px;
         }
-        
+
         .atom {
             text-align: center;
         }
-        
+
         .nucleus {
             width: 100px;
             height: 100px;
@@ -238,7 +552,7 @@
             margin: 0 auto 15px;
             position: relative;
         }
-        
+
         .electron {
             width: 25px;
             height: 25px;
@@ -247,19 +561,19 @@
             position: absolute;
             box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
         }
-        
+
         .electron.e1 {
             top: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         .electron.e2 {
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         /* Comparison Tables */
         .compare-table {
             background: white;
@@ -268,12 +582,12 @@
             margin: 30px 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
-        
+
         .compare-table table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         .compare-table th {
             background: #667eea;
             color: white;
@@ -281,21 +595,21 @@
             font-size: 1.3em;
             text-align: left;
         }
-        
+
         .compare-table td {
             padding: 20px;
             border-bottom: 1px solid #e0e0e0;
             font-size: 1.1em;
         }
-        
+
         .compare-table tr:nth-child(even) {
             background: #f8f9fa;
         }
-        
+
         .compare-table tr:hover {
             background: #e3f2fd;
         }
-        
+
         /* Formula Boxes */
         .formula-showcase {
             display: grid;
@@ -303,7 +617,7 @@
             gap: 20px;
             margin: 30px 0;
         }
-        
+
         .formula-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -312,7 +626,7 @@
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
-        
+
         .formula-box .formula {
             font-family: 'Courier New', monospace;
             font-size: 2em;
@@ -320,13 +634,13 @@
             margin: 20px 0;
             letter-spacing: 2px;
         }
-        
+
         .formula-box .description {
             font-size: 1.1em;
             opacity: 0.95;
             line-height: 1.6;
         }
-        
+
         /* Step-by-Step Process */
         .process-flow {
             background: white;
@@ -335,7 +649,7 @@
             margin: 30px 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
-        
+
         .process-step {
             display: flex;
             align-items: flex-start;
@@ -346,11 +660,11 @@
             border-radius: 12px;
             border-left: 5px solid #667eea;
         }
-        
+
         .process-step:last-child {
             margin-bottom: 0;
         }
-        
+
         .step-number {
             width: 50px;
             height: 50px;
@@ -364,12 +678,12 @@
             font-weight: 800;
             flex-shrink: 0;
         }
-        
+
         .step-content h4 {
             color: #667eea;
             margin-bottom: 10px;
         }
-        
+
         /* Key Points Boxes */
         .key-points {
             background: #fff3cd;
@@ -378,18 +692,18 @@
             border-radius: 12px;
             margin: 30px 0;
         }
-        
+
         .key-points h4 {
             color: #d97706;
             margin-bottom: 20px;
             font-size: 1.6em;
         }
-        
+
         .key-points ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .key-points li {
             padding-left: 30px;
             position: relative;
@@ -397,7 +711,7 @@
             font-size: 1.15em;
             line-height: 1.7;
         }
-        
+
         .key-points li:before {
             content: "✓";
             position: absolute;
@@ -406,7 +720,7 @@
             font-weight: 800;
             font-size: 1.3em;
         }
-        
+
         /* Real-World Examples */
         .real-world {
             background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
@@ -414,31 +728,31 @@
             border-radius: 20px;
             margin: 40px 0;
         }
-        
+
         .real-world h3 {
             color: #065f46;
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .example-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
-        
+
         .example-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        
+
         .example-card h4 {
             color: #059669;
             margin-bottom: 12px;
         }
-        
+
         /* Quick Reference Section */
         .quick-ref {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -447,19 +761,19 @@
             border-radius: 24px;
             margin: 50px 0;
         }
-        
+
         .quick-ref h2 {
             color: white;
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .ref-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
-        
+
         .ref-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -467,13 +781,13 @@
             border-radius: 16px;
             border: 3px solid rgba(255,255,255,0.3);
         }
-        
+
         .ref-card h4 {
             color: #4ecdc4;
             margin-bottom: 15px;
             font-size: 1.5em;
         }
-        
+
         .ref-card .formula-display {
             background: rgba(255,255,255,0.2);
             padding: 15px;
@@ -484,7 +798,7 @@
             margin: 15px 0;
             font-weight: 700;
         }
-        
+
         /* Study Tips */
         .study-tips {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
@@ -492,75 +806,96 @@
             border-radius: 20px;
             margin: 40px 0;
         }
-        
+
         .study-tips h3 {
             color: #d63031;
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .tip-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        
+
         .tip-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        
+
         .tip-card .tip-icon {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-align: center;
         }
-        
+
         .tip-card h4 {
             color: #d63031;
             text-align: center;
             margin-bottom: 12px;
         }
-        
+
         .tip-card p {
             text-align: center;
             font-size: 1.05em;
         }
-        
+
+        /* Pause and Think */
+        .pause-box {
+            background: #fffbeb;
+            border: 3px dashed #f59e0b;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .pause-box h4 {
+            color: #d97706;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .pause-box p {
+            font-size: 1.2em;
+            color: #92400e;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .content {
                 padding: 30px 20px;
             }
-            
+
             .header {
                 padding: 40px 20px;
             }
-            
+
             .concept-grid,
             .example-grid,
             .ref-grid,
             .tip-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .process-step {
                 flex-direction: column;
             }
         }
-        
+
         /* Print Styles */
         @media print {
             body {
                 background: white;
             }
-            
+
             .container {
                 box-shadow: none;
             }
-            
+
             .week-section {
                 page-break-inside: avoid;
             }
@@ -573,9 +908,9 @@
         <header class="header">
             <h1>🧪 Chemistry Complete Reference</h1>
             <p class="subtitle">Your 4-Week Journey Through Matter, Bonding & Reactions</p>
-            <p class="meta">Grade 7 Science | MS-PS1 Standards | Mr. Rosche</p>
+            <p class="meta">Grade 7 Science | MS-PS1 Standards | Research-Based Learning</p>
         </header>
-        
+
         <main class="content">
             <!-- Week Navigation -->
             <section class="week-nav">
@@ -606,7 +941,51 @@
                 <p style="font-size: 1.2em; margin-bottom: 30px;">
                     <strong>The Big Question:</strong> Why do water, salt, and sugar act so different if they're all made of atoms?
                 </p>
-                
+
+                <!-- Johnstone's Triangle Introduction -->
+                <div class="johnstone-triangle">
+                    <h3>🔺 Understanding Chemistry at 3 Levels</h3>
+                    <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">
+                        <strong>Expert Chemistry Habit:</strong> Always connect what you SEE (macro) to what's HAPPENING with atoms (micro) to how we WRITE it (symbolic)!
+                    </p>
+                    <div class="three-levels">
+                        <div class="level-card macro">
+                            <h4>🔬 Macro (Observable)</h4>
+                            <p><strong>What you can SEE:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>Salt dissolves in water</li>
+                                <li>White crystals</li>
+                                <li>Heat released</li>
+                            </ul>
+                        </div>
+                        <div class="level-card micro">
+                            <h4>⚛️ Micro (Molecular)</h4>
+                            <p><strong>What atoms are DOING:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>Na⁺ and Cl⁻ ions separate</li>
+                                <li>Attractions broken/formed</li>
+                                <li>Ionic crystal lattice</li>
+                            </ul>
+                        </div>
+                        <div class="level-card symbolic">
+                            <h4>✏️ Symbolic (Representation)</h4>
+                            <p><strong>How chemists WRITE it:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>NaCl(s) → Na⁺(aq) + Cl⁻(aq)</li>
+                                <li>ΔH = -4 kJ/mol</li>
+                                <li>Ionic formula</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Lens for Week 1 -->
+                <div class="engineering-lens">
+                    <h4>🔧 Week 1 Through Engineering Eyes</h4>
+                    <p><strong>Engineer's question:</strong> "If I need to release heat, which atoms/molecules give me the most energy when bonds form?"</p>
+                    <p style="margin-top: 15px;"><strong>Your task this week:</strong> As you learn about atoms, start thinking: Which elements might be good for heat-releasing reactions? (Hint: You'll use this in Week 4!)</p>
+                </div>
+
                 <div class="concept-grid">
                     <div class="concept-card atoms">
                         <h4>🎯 What Are Atoms?</h4>
@@ -617,7 +996,7 @@
                             <li style="margin-bottom: 10px;">Can't be broken down by chemical reactions</li>
                         </ul>
                     </div>
-                    
+
                     <div class="concept-card atoms">
                         <h4>⚛️ Three Subatomic Particles</h4>
                         <p><strong>Proton (+)</strong> - Positive charge, in nucleus</p>
@@ -627,7 +1006,7 @@
                             💡 <strong>Key:</strong> Number of protons = atomic number (defines the element!)
                         </p>
                     </div>
-                    
+
                     <div class="concept-card atoms">
                         <h4>🧲 How Atoms Connect</h4>
                         <p><strong>Molecules = Two or more atoms bonded together</strong></p>
@@ -664,6 +1043,42 @@
                     </div>
                 </div>
 
+                <!-- Retrieval Practice -->
+                <div class="retrieval-check">
+                    <h4>⏸️ Before Reading Ahead: Check Your Understanding</h4>
+                    <p><strong>Without looking back, write down:</strong></p>
+                    <ol>
+                        <li>What are the three subatomic particles, and where is each located?</li>
+                        <li>What determines which element an atom is?</li>
+                        <li>How is a molecule different from an atom?</li>
+                    </ol>
+                    <details style="margin-top: 20px;">
+                        <summary>Check your answers</summary>
+                        <div style="padding: 15px;">
+                            <p><strong>1.</strong> Protons (+) and neutrons (0) in nucleus; electrons (-) orbit around nucleus</p>
+                            <p><strong>2.</strong> The number of protons (atomic number) defines the element</p>
+                            <p><strong>3.</strong> Atoms are single units of elements; molecules are two or more atoms bonded together</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Confidence Check -->
+                <div class="confidence-check">
+                    <h4>✓ Confidence Check</h4>
+                    <p style="font-size: 1.2em; margin-bottom: 15px;">Rate your confidence: "I can explain why carbon has 6 protons and what would happen if it had 7 protons instead"</p>
+                    <div class="confidence-scale">
+                        <button>1 - No clue</button>
+                        <button>2 - Confused</button>
+                        <button>3 - Getting it</button>
+                        <button>4 - Pretty sure</button>
+                        <button>5 - Can teach it</button>
+                    </div>
+                    <details>
+                        <summary>Click if you rated 1-3 for explanation</summary>
+                        <p style="padding: 15px;"><strong>Answer:</strong> Carbon MUST have exactly 6 protons - that's what makes it carbon! If it had 7 protons, it would be nitrogen (a completely different element). The number of protons is the identity of the element and cannot change without becoming a different element.</p>
+                    </details>
+                </div>
+
                 <div class="key-points">
                     <h4>🔑 Week 1 Key Takeaways</h4>
                     <ul>
@@ -682,6 +1097,142 @@
                 <p style="font-size: 1.2em; margin-bottom: 30px;">
                     <strong>The Big Question:</strong> How do atoms stick together, and why does it matter?
                 </p>
+
+                <!-- Engineering Lens for Week 2 -->
+                <div class="engineering-lens">
+                    <h4>🔧 Week 2 Through Engineering Eyes</h4>
+                    <p><strong>Engineer's question:</strong> "Ionic bonds release energy when forming. Covalent bonds can too. Which bond type gives more energy?"</p>
+                    <p style="margin-top: 15px;"><strong>Your task this week:</strong> Compare energy released: Na + Cl → NaCl vs H + H → H₂. Which would make a better hand warmer?</p>
+                </div>
+
+                <!-- Concrete-Pictorial-Abstract Progression -->
+                <div class="cpa-sequence">
+                    <div class="concrete-start">
+                        <h4>🔬 Let's Observe First (CONCRETE)</h4>
+                        <p style="font-size: 1.2em;"><strong>Activity:</strong> Look at salt crystals forming when saltwater evaporates.</p>
+                        <p style="margin-top: 15px;"><strong>What you notice:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Perfect cube shapes</li>
+                            <li>Hard and brittle</li>
+                            <li>Dissolves easily in water</li>
+                            <li>Conducts electricity when dissolved</li>
+                        </ul>
+                        <div class="pause-box" style="margin-top: 20px;">
+                            <h4>⏸️ Pause and Predict</h4>
+                            <p>WHY do you think salt forms perfect cubes? What might be happening at the atomic level?</p>
+                        </div>
+                    </div>
+
+                    <div class="pictorial-connection">
+                        <h4>📊 Now Let's Model What's Happening (PICTORIAL)</h4>
+                        <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>The Atomic Story:</strong></p>
+                        <div style="background: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                            <p style="font-size: 1.15em; line-height: 1.8;">
+                                <strong>Step 1:</strong> Sodium (Na) atom has 1 electron in outer shell → wants to lose it<br>
+                                <strong>Step 2:</strong> Chlorine (Cl) atom has 7 electrons in outer shell → needs 1 more<br>
+                                <strong>Step 3:</strong> Na gives its electron to Cl → Na becomes Na⁺ (positive), Cl becomes Cl⁻ (negative)<br>
+                                <strong>Step 4:</strong> Opposite charges attract! → They stick together in a repeating 3D pattern (that's why perfect cubes!)
+                            </p>
+                        </div>
+                        <div class="connection-box">
+                            <strong>The Connection:</strong> The cube shape you OBSERVED happens BECAUSE Na⁺ and Cl⁻ ions arrange in a repeating 3D pattern. Each ion attracts multiple opposite ions, creating the crystal lattice!
+                        </div>
+                    </div>
+
+                    <div class="abstract-representation">
+                        <h4>✏️ Scientists' Shorthand (ABSTRACT/SYMBOLIC)</h4>
+                        <p style="font-size: 1.2em; margin-bottom: 15px;"><strong>How chemists write ionic bonding:</strong></p>
+                        <div style="background: white; padding: 20px; border-radius: 12px; margin: 15px 0;">
+                            <p style="font-family: 'Courier New', monospace; font-size: 1.4em; text-align: center; font-weight: 700;">
+                                Na + Cl → Na⁺Cl⁻ or simply NaCl
+                            </p>
+                        </div>
+                        <p style="margin-top: 15px;"><strong>What the formula tells you:</strong> NaCl represents the 1:1 ratio of Na⁺ to Cl⁻ ions in the crystal pattern you observed!</p>
+                    </div>
+                </div>
+
+                <!-- Johnstone's Triangle for Ionic Bonding -->
+                <div class="johnstone-triangle">
+                    <h3>🔺 Ionic Bonding at 3 Levels</h3>
+                    <div class="three-levels">
+                        <div class="level-card macro">
+                            <h4>What You See 👁️</h4>
+                            <p>White crystals, high melting point (801°C), conducts electricity when dissolved</p>
+                        </div>
+                        <div class="level-card micro">
+                            <h4>What's Happening at Atomic Level ⚛️</h4>
+                            <p>Na loses electron → Na⁺ (cation). Cl gains electron → Cl⁻ (anion). Opposite charges attract in repeating 3D lattice. Strong electrostatic forces hold ions together.</p>
+                        </div>
+                        <div class="level-card symbolic">
+                            <h4>How Chemists Write It ✏️</h4>
+                            <p>Na + Cl → Na⁺Cl⁻ or NaCl</p>
+                            <p>Lewis structure: [Na]⁺[⋅Cl⋅⋅⋅]⁻</p>
+                        </div>
+                    </div>
+                    <div class="connection-box">
+                        <strong>The Connection:</strong> High melting point (MACRO) happens BECAUSE strong electrostatic attractions (MICRO) require lots of energy to break. The +/- charges (SYMBOLIC) represent electron transfer (MICRO) that creates the conducting solution (MACRO).
+                    </div>
+                </div>
+
+                <!-- Misconception Alert #1 -->
+                <div class="misconception-alert">
+                    <h4>🚫 Misconception Alert #1</h4>
+                    <p class="wrong">❌ <strong>WRONG:</strong> "Ionic bonds are weak because salt dissolves easily in water."</p>
+                    <p class="right">✓ <strong>RIGHT:</strong> Ionic bonds are VERY strong (801°C melting point proves it!). Water dissolves salt because water molecules surround and stabilize ions—not because bonds are weak.</p>
+                    <p class="evidence"><strong>Research shows</strong> (Taber, 1997): 65% of students incorrectly believe ionic bonds are weak. <strong>Evidence:</strong> Try melting salt vs sugar. Salt needs much higher temperature because ionic bonds are stronger!</p>
+                </div>
+
+                <!-- Misconception Alert #2 -->
+                <div class="misconception-alert">
+                    <h4>🚫 Misconception Alert #2</h4>
+                    <p class="wrong">❌ <strong>WRONG:</strong> "Atoms 'want' to have 8 electrons in their outer shell."</p>
+                    <p class="right">✓ <strong>RIGHT:</strong> Atoms don't "want" anything. Lower energy states are more stable. Full outer shells happen to be lower energy for most elements, so that's the arrangement atoms "settle into"—not because they're trying to reach 8.</p>
+                    <p class="evidence"><strong>Why this matters:</strong> Understanding energy stability (not "wanting") helps you predict bonding patterns correctly!</p>
+                </div>
+
+                <!-- Worked Example -->
+                <div class="worked-example">
+                    <h3>📝 Worked Example: Predicting Bond Type</h3>
+                    <div class="problem">
+                        <p style="font-size: 1.3em;"><strong>Question:</strong> Will MgO form ionic or covalent bonds?</p>
+                    </div>
+                    <div class="expert-solution">
+                        <div class="step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Identify elements</strong>
+                                <p>Mg = magnesium, O = oxygen</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Find on periodic table</strong>
+                                <p>Mg is a metal (left side - shiny, conducts electricity)</p>
+                                <p>O is a nonmetal (right side - dull, doesn't conduct)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Apply rule</strong>
+                                <p>Metal + Nonmetal = IONIC bonding</p>
+                                <p>(Metals give electrons, nonmetals take electrons)</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">4</span>
+                            <div class="step-content">
+                                <strong>Verify with properties</strong>
+                                <p>MgO has high melting point (2852°C), forms crystals, conducts when melted</p>
+                                <p>→ This confirms ionic bonding!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="your-turn">
+                        <p style="font-size: 1.2em;"><strong>Now you try:</strong> Predict bonding in CO₂ using the same 4 steps. (Hint: Check whether C and O are metals or nonmetals!)</p>
+                    </div>
+                </div>
 
                 <div class="compare-table">
                     <table>
@@ -732,76 +1283,49 @@
                     </table>
                 </div>
 
-                <div class="concept-grid">
-                    <div class="concept-card ionic">
-                        <h4>⚡ Ionic Bonding Deep Dive</h4>
-                        <p><strong>The Process:</strong></p>
-                        <div class="process-flow" style="margin-top: 20px;">
-                            <div class="process-step" style="background: #e3f2fd; border-color: #4ecdc4;">
-                                <div class="step-number" style="background: #4ecdc4;">1</div>
-                                <div class="step-content">
-                                    <h4 style="color: #4ecdc4;">Sodium (Na) starts with 1 valence electron</h4>
-                                    <p>Wants to lose it to become stable</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e3f2fd; border-color: #4ecdc4;">
-                                <div class="step-number" style="background: #4ecdc4;">2</div>
-                                <div class="step-content">
-                                    <h4 style="color: #4ecdc4;">Chlorine (Cl) has 7 valence electrons</h4>
-                                    <p>Needs 1 more to complete outer shell</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e3f2fd; border-color: #4ecdc4;">
-                                <div class="step-number" style="background: #4ecdc4;">3</div>
-                                <div class="step-content">
-                                    <h4 style="color: #4ecdc4;">Transfer happens!</h4>
-                                    <p>Na gives electron to Cl → Na⁺ and Cl⁻ form</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e3f2fd; border-color: #4ecdc4;">
-                                <div class="step-number" style="background: #4ecdc4;">4</div>
-                                <div class="step-content">
-                                    <h4 style="color: #4ecdc4;">Opposite charges attract!</h4>
-                                    <p>Na⁺ and Cl⁻ stick together = NaCl (salt)</p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Retrieval Practice with Delayed Feedback -->
+                <div class="retrieval-check">
+                    <h4>⏸️ Practice Set: Try All Before Checking Answers</h4>
+                    <ol>
+                        <li>Predict the bond type in CaO. Explain your reasoning using the 4-step process.</li>
+                        <li>Why does NaCl conduct electricity when dissolved but not when solid?</li>
+                        <li>If an atom has 11 protons and 11 electrons, will it likely form ionic or covalent bonds? Why?</li>
+                    </ol>
+                    <p style="margin-top: 20px; font-style: italic; color: #7e22ce;">Try all three before scrolling to answers below...</p>
+
+                    <div style="height: 200px; background: #f3e8ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 30px 0;">
+                        <p style="font-size: 1.3em; color: #7e22ce; font-weight: 600;">⬇️ Scroll down for answers after attempting all problems ⬇️</p>
                     </div>
-                    
-                    <div class="concept-card covalent">
-                        <h4>🤝 Covalent Bonding Deep Dive</h4>
-                        <p><strong>The Process:</strong></p>
-                        <div class="process-flow" style="margin-top: 20px;">
-                            <div class="process-step" style="background: #e8f5e9; border-color: #95e1d3;">
-                                <div class="step-number" style="background: #95e1d3; color: #000;">1</div>
-                                <div class="step-content">
-                                    <h4 style="color: #059669;">Hydrogen (H) has 1 electron</h4>
-                                    <p>Needs 1 more to be stable</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e8f5e9; border-color: #95e1d3;">
-                                <div class="step-number" style="background: #95e1d3; color: #000;">2</div>
-                                <div class="step-content">
-                                    <h4 style="color: #059669;">Oxygen (O) has 6 valence electrons</h4>
-                                    <p>Needs 2 more to complete outer shell</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e8f5e9; border-color: #95e1d3;">
-                                <div class="step-number" style="background: #95e1d3; color: #000;">3</div>
-                                <div class="step-content">
-                                    <h4 style="color: #059669;">Sharing happens!</h4>
-                                    <p>O shares with 2 H atoms → both hold electrons</p>
-                                </div>
-                            </div>
-                            <div class="process-step" style="background: #e8f5e9; border-color: #95e1d3;">
-                                <div class="step-number" style="background: #95e1d3; color: #000;">4</div>
-                                <div class="step-content">
-                                    <h4 style="color: #059669;">Molecule forms!</h4>
-                                    <p>H-O-H = H₂O (water) - all atoms now stable</p>
-                                </div>
-                            </div>
+
+                    <details>
+                        <summary><strong>Click after attempting all problems</strong></summary>
+                        <div style="padding: 20px;">
+                            <p><strong>Problem 1:</strong> CaO is ionic. Ca is a metal (left side), O is nonmetal (right side). Metal + nonmetal = ionic. Ca gives 2 electrons to O, forming Ca²⁺ and O²⁻.</p>
+                            <p style="margin-top: 15px;"><strong>Problem 2:</strong> Solid NaCl: Ions locked in crystal lattice → can't move → can't carry charge. Dissolved NaCl: Ions surrounded by water → free to move → can carry electric charge!</p>
+                            <p style="margin-top: 15px;"><strong>Problem 3:</strong> 11 protons = sodium (Na), a metal. Metals form IONIC bonds with nonmetals because metals easily lose electrons to become stable positive ions.</p>
                         </div>
+                    </details>
+                </div>
+
+                <!-- Confidence Check -->
+                <div class="confidence-check">
+                    <h4>✓ Confidence Check</h4>
+                    <p style="font-size: 1.2em; margin-bottom: 15px;">Rate your confidence: "I can explain why NaCl conducts electricity when dissolved but not when solid"</p>
+                    <div class="confidence-scale">
+                        <button>1 - No clue</button>
+                        <button>2 - Confused</button>
+                        <button>3 - Getting it</button>
+                        <button>4 - Pretty sure</button>
+                        <button>5 - Can teach it</button>
                     </div>
+                    <details>
+                        <summary>Click if you rated 1-3 for explanation</summary>
+                        <div style="padding: 15px;">
+                            <p><strong>Solid NaCl:</strong> Ions locked in place in crystal lattice → can't move → can't carry charge</p>
+                            <p style="margin-top: 10px;"><strong>Dissolved NaCl:</strong> Ions surrounded by water → free to move → can carry electric charge</p>
+                            <p style="margin-top: 10px;"><strong>Key insight:</strong> Electricity needs charged particles that can MOVE. Solid = locked in place. Dissolved = free to move!</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="key-points">
@@ -811,7 +1335,7 @@
                         <li><strong>Covalent bonds:</strong> Share electrons (nonmetal + nonmetal), lower melting points</li>
                         <li>Ionic compounds conduct electricity when dissolved (ions can move!)</li>
                         <li>Bond type determines properties (why salt melts at 800°C but water boils at 100°C!)</li>
-                        <li>Writing formulas: Balance charges for ionic (Ca²⁺ + Cl⁻ → CaCl₂), count atoms for covalent (H₂O)</li>
+                        <li>Always think at 3 levels: What you SEE → What atoms DO → How we WRITE it</li>
                     </ul>
                 </div>
             </section>
@@ -822,6 +1346,33 @@
                 <p style="font-size: 1.2em; margin-bottom: 30px;">
                     <strong>The Big Question:</strong> What happens when chemical bonds break and form? Where does the wax go when a candle burns?
                 </p>
+
+                <!-- Engineering Lens for Week 3 -->
+                <div class="engineering-lens">
+                    <h4>🔧 Week 3 Through Engineering Eyes</h4>
+                    <p><strong>Engineer's question:</strong> "I measured CaCl₂ + water releases 82 kJ/mol. Is that enough to warm someone's hands for 30 minutes?"</p>
+                    <p style="margin-top: 15px;"><strong>Your task this week:</strong> Calculate: If a hand warmer needs to maintain 40°C for 30 min, how much CaCl₂ is needed? (You'll use this in Week 4!)</p>
+                </div>
+
+                <!-- Particulate Thinking -->
+                <div class="johnstone-triangle">
+                    <h3>⚛️ Always Think: Where Are the Atoms?</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 30px; border-radius: 16px;">
+                            <h4 style="color: #d97706;">What You See (MACRO)</h4>
+                            <p style="font-size: 1.2em; margin-top: 15px;">Ice melting into water</p>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 16px;">
+                            <h4 style="color: #0891b2;">What Atoms Are Doing (MICRO)</h4>
+                            <p style="margin-top: 15px;"><strong>H₂O molecules in ice:</strong> Locked in fixed positions, vibrating in place</p>
+                            <p style="margin-top: 10px;"><strong>H₂O molecules in water:</strong> Moving freely past each other, still connected by temporary attractions</p>
+                            <p style="margin-top: 15px; padding: 15px; background: white; border-radius: 8px;"><strong>Key insight:</strong> SAME molecules (H₂O), DIFFERENT arrangement!</p>
+                        </div>
+                    </div>
+                    <div class="connection-box" style="margin-top: 25px;">
+                        <strong>🎯 Expert Chemistry Habit:</strong> Every time you see a chemical change, immediately ask: "What are the atoms/molecules doing?" If you can't picture it, you don't truly understand it yet!
+                    </div>
+                </div>
 
                 <div class="concept-grid">
                     <div class="concept-card reaction">
@@ -834,7 +1385,7 @@
                             <li style="margin-bottom: 10px;"><strong>Light production</strong> - Fire, glow sticks</li>
                         </ul>
                     </div>
-                    
+
                     <div class="concept-card reaction">
                         <h4>⚖️ Conservation of Mass</h4>
                         <p><strong>Atoms are REARRANGED, never created or destroyed!</strong></p>
@@ -847,7 +1398,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="concept-card energy">
                         <h4>🔥❄️ Energy in Reactions</h4>
                         <p><strong>EXOTHERMIC:</strong> Releases heat → Gets WARMER</p>
@@ -860,6 +1411,55 @@
                             <li>Examples: Instant cold packs, photosynthesis</li>
                             <li>Takes energy from surroundings</li>
                         </ul>
+                    </div>
+                </div>
+
+                <!-- Worked Example for Balancing -->
+                <div class="worked-example">
+                    <h3>📝 Worked Example: Balancing Chemical Equations</h3>
+                    <div class="problem">
+                        <p style="font-size: 1.3em;"><strong>Question:</strong> Balance this equation: H₂ + O₂ → H₂O</p>
+                    </div>
+                    <div class="expert-solution">
+                        <div class="step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Count atoms on each side</strong>
+                                <p>Left: 2 H, 2 O</p>
+                                <p>Right: 2 H, 1 O</p>
+                                <p style="color: #dc2626; font-weight: 700; margin-top: 8px;">❌ NOT BALANCED! Oxygen doesn't match!</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Add coefficient to fix oxygen</strong>
+                                <p>Try: H₂ + O₂ → 2H₂O</p>
+                                <p>Now right side has: 4 H, 2 O</p>
+                                <p style="color: #d97706; font-weight: 700; margin-top: 8px;">⚠️ Oxygen balanced, but now hydrogen doesn't match!</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Fix hydrogen by adding coefficient</strong>
+                                <p>Try: 2H₂ + O₂ → 2H₂O</p>
+                                <p>Left: 4 H, 2 O</p>
+                                <p>Right: 4 H, 2 O</p>
+                                <p style="color: #059669; font-weight: 700; margin-top: 8px;">✓ BALANCED!</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">4</span>
+                            <div class="step-content">
+                                <strong>Verify conservation of mass</strong>
+                                <p>Same number of each atom type on both sides means mass is conserved!</p>
+                                <p style="background: #d1fae5; padding: 12px; border-radius: 8px; margin-top: 10px;">This balanced equation shows atoms rearranging (2 H₂ molecules + 1 O₂ molecule → 2 H₂O molecules), but NO atoms created or destroyed!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="your-turn">
+                        <p style="font-size: 1.2em;"><strong>Now you try:</strong> Balance this equation using the same 4 steps: N₂ + H₂ → NH₃</p>
                     </div>
                 </div>
 
@@ -915,6 +1515,29 @@
                     </div>
                 </div>
 
+                <!-- Retrieval Practice -->
+                <div class="retrieval-check">
+                    <h4>⏸️ Practice Set: Try All Before Checking</h4>
+                    <ol>
+                        <li>Is dissolving salt in water a physical or chemical change? Explain using atomic-level thinking.</li>
+                        <li>If you start with 100g of wood and burn it completely, and measure 20g of ash, where did the other 80g go? (Hint: Think conservation of mass!)</li>
+                        <li>Classify as exothermic or endothermic: A reaction that makes the beaker feel cold to touch.</li>
+                    </ol>
+
+                    <div style="height: 200px; background: #f3e8ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 30px 0;">
+                        <p style="font-size: 1.3em; color: #7e22ce; font-weight: 600;">⬇️ Scroll down for answers ⬇️</p>
+                    </div>
+
+                    <details>
+                        <summary><strong>Check answers after attempting</strong></summary>
+                        <div style="padding: 20px;">
+                            <p><strong>1.</strong> Physical change! NaCl dissolves but molecules stay as Na⁺ and Cl⁻ ions. At atomic level: ions separate from crystal but don't change into different substances. Same atoms, just rearranged in water.</p>
+                            <p style="margin-top: 15px;"><strong>2.</strong> The 80g became CO₂ gas (and H₂O vapor) that escaped into the air! Mass is ALWAYS conserved - it just changed form. If you captured all gases in a closed system, total mass would still be 100g.</p>
+                            <p style="margin-top: 15px;"><strong>3.</strong> ENDOTHERMIC! The reaction absorbed heat FROM the beaker (and your hand), making it feel cold. Energy went INTO the reaction from surroundings.</p>
+                        </div>
+                    </details>
+                </div>
+
                 <div class="formula-showcase">
                     <div class="formula-box">
                         <h4>Reaction Rates</h4>
@@ -927,7 +1550,7 @@
                             Catalysts = ↑↑ Speed
                         </div>
                     </div>
-                    
+
                     <div class="formula-box">
                         <h4>Balancing Equations</h4>
                         <div class="formula">2H₂ + O₂ → 2H₂O</div>
@@ -938,7 +1561,7 @@
                             ✓ Balanced = Mass conserved
                         </div>
                     </div>
-                    
+
                     <div class="formula-box">
                         <h4>Activation Energy</h4>
                         <div class="formula">E<sub>a</sub></div>
@@ -959,8 +1582,7 @@
                         <li><strong>Conservation of mass:</strong> Atoms rearrange but don't disappear (mass before = mass after)</li>
                         <li><strong>Exothermic</strong> reactions RELEASE heat (burning, rusting, hand warmers)</li>
                         <li><strong>Endothermic</strong> reactions ABSORB heat (cold packs, photosynthesis)</li>
-                        <li><strong>Reaction rates</strong> increase with: temperature, surface area, concentration, catalysts</li>
-                        <li><strong>Balance equations</strong> to show conservation of mass (same # atoms on both sides)</li>
+                        <li><strong>Always visualize:</strong> What are the atoms/molecules doing during the reaction?</li>
                     </ul>
                 </div>
             </section>
@@ -990,6 +1612,28 @@
                     </div>
                 </div>
 
+                <!-- Connection to Previous Weeks -->
+                <div class="johnstone-triangle">
+                    <h3>🔗 How Weeks 1-3 Connect to Your Engineering Design</h3>
+                    <div class="three-levels">
+                        <div class="level-card macro" style="border-color: #ff6b9d;">
+                            <h4>Week 1: Atoms & Molecules</h4>
+                            <p><strong>Why it matters for engineering:</strong> Understanding which atoms form molecules that release energy helps you choose the RIGHT chemicals for your device!</p>
+                            <p style="margin-top: 12px;">Example: CaCl₂ (calcium chloride) has Ca²⁺ and Cl⁻ ions that release energy when bonds form with water.</p>
+                        </div>
+                        <div class="level-card micro" style="border-color: #4ecdc4;">
+                            <h4>Week 2: Chemical Bonding</h4>
+                            <p><strong>Why it matters for engineering:</strong> Ionic bonds (like in CaCl₂) release MORE energy than covalent bonds when forming!</p>
+                            <p style="margin-top: 12px;">This is why we use ionic compounds for hand warmers - maximum energy release!</p>
+                        </div>
+                        <div class="level-card symbolic" style="border-color: #f7b731;">
+                            <h4>Week 3: Reactions & Energy</h4>
+                            <p><strong>Why it matters for engineering:</strong> Exothermic reactions (ΔH negative) release heat. You can CALCULATE exactly how much heat using chemistry!</p>
+                            <p style="margin-top: 12px;">Example: CaCl₂ + H₂O → Ca(OH)₂ + Heat (82 kJ/mol)</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="concept-grid">
                     <div class="concept-card energy">
                         <h4>🔥 Heating Device Options</h4>
@@ -1003,7 +1647,7 @@
                             💡 <strong>Real example:</strong> Hand warmers use iron oxidation!
                         </p>
                     </div>
-                    
+
                     <div class="concept-card energy">
                         <h4>❄️ Cooling Device Options</h4>
                         <p><strong>Use ENDOTHERMIC reactions</strong></p>
@@ -1020,7 +1664,7 @@
 
                 <div class="process-flow">
                     <h3 style="text-align: center; margin-bottom: 30px;">🔄 Engineering Design Process</h3>
-                    
+
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <div class="step-content">
@@ -1028,7 +1672,7 @@
                             <p>Test different reactions. Collect data on temperature change (ΔT) and duration. Which reaction releases/absorbs most energy?</p>
                         </div>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <div class="step-content">
@@ -1036,7 +1680,7 @@
                             <p>Choose reaction based on data. Sketch your device design. Consider: container, activation method, safety features, portability.</p>
                         </div>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <div class="step-content">
@@ -1044,7 +1688,7 @@
                             <p>Build Version 1. Test it! Measure: starting temp, max/min temp reached, duration, ease of use. Document everything!</p>
                         </div>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <div class="step-content">
@@ -1052,7 +1696,7 @@
                             <p>What worked? What didn't? Make specific improvements for Version 2. Test again. Compare V1 vs V2 data.</p>
                         </div>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">5</div>
                         <div class="step-content">
@@ -1062,6 +1706,18 @@
                     </div>
                 </div>
 
+                <!-- Metacognitive Reflection -->
+                <div class="confidence-check">
+                    <h4>🎯 Engineering Reflection</h4>
+                    <p style="font-size: 1.2em; margin-bottom: 20px;">Before building, reflect on your understanding:</p>
+                    <div style="background: white; padding: 25px; border-radius: 12px; margin: 20px 0;">
+                        <p style="font-size: 1.15em; margin-bottom: 15px;"><strong>1. Can you explain at the ATOMIC level why your chosen reaction releases/absorbs heat?</strong></p>
+                        <p style="font-size: 1.15em; margin-bottom: 15px;"><strong>2. What from Week 2 (bonding) helps you understand why ionic compounds work well for heat release?</strong></p>
+                        <p style="font-size: 1.15em;"><strong>3. How does conservation of mass (Week 3) apply to your device?</strong></p>
+                    </div>
+                    <p style="font-style: italic; color: #1e40af; margin-top: 15px;">If you can't answer these, review those weeks! Understanding the chemistry DEEPLY makes better engineering!</p>
+                </div>
+
                 <div class="key-points">
                     <h4>🔑 Week 4 Key Takeaways</h4>
                     <ul>
@@ -1069,9 +1725,8 @@
                         <li><strong>Exothermic reactions</strong> (CaCl₂ + water) work for heating devices</li>
                         <li><strong>Endothermic reactions</strong> (NH₄NO₃ + water) work for cooling devices</li>
                         <li><strong>Data-driven decisions:</strong> Choose reactions based on ΔT and duration</li>
-                        <li><strong>Trade-offs:</strong> Optimize for specific use case (temperature vs duration vs safety)</li>
-                        <li><strong>Real-world constraints:</strong> Must be safe, portable, affordable, practical</li>
-                        <li><strong>Chemistry → Engineering:</strong> Understanding molecular bonds explains device performance</li>
+                        <li><strong>Chemistry enables engineering:</strong> Understanding bonds and reactions at atomic level helps you design better devices!</li>
+                        <li><strong>All 4 weeks connected:</strong> Atoms → Bonds → Reactions → Engineering applications</li>
                     </ul>
                 </div>
             </section>
@@ -1079,7 +1734,7 @@
             <!-- Quick Reference -->
             <section class="quick-ref">
                 <h2>📋 Quick Reference: Must-Know Formulas & Concepts</h2>
-                
+
                 <div class="ref-grid">
                     <div class="ref-card">
                         <h4>Atomic Structure</h4>
@@ -1092,7 +1747,7 @@
                             <li>Atomic # defines element</li>
                         </ul>
                     </div>
-                    
+
                     <div class="ref-card">
                         <h4>Ionic Bonding</h4>
                         <div class="formula-display">Metal → Nonmetal</div>
@@ -1105,7 +1760,7 @@
                             <li>Example: NaCl, CaCl₂</li>
                         </ul>
                     </div>
-                    
+
                     <div class="ref-card">
                         <h4>Covalent Bonding</h4>
                         <div class="formula-display">Nonmetal + Nonmetal</div>
@@ -1118,7 +1773,7 @@
                             <li>Example: H₂O, CO₂</li>
                         </ul>
                     </div>
-                    
+
                     <div class="ref-card">
                         <h4>Conservation of Mass</h4>
                         <div class="formula-display">Mass₍before₎ = Mass₍after₎</div>
@@ -1130,7 +1785,7 @@
                             <li>Same # atoms both sides</li>
                         </ul>
                     </div>
-                    
+
                     <div class="ref-card">
                         <h4>Exothermic Reactions</h4>
                         <div class="formula-display">Releases Heat → ↑ Temp</div>
@@ -1142,7 +1797,7 @@
                             <li>Use for heating devices</li>
                         </ul>
                     </div>
-                    
+
                     <div class="ref-card">
                         <h4>Endothermic Reactions</h4>
                         <div class="formula-display">Absorbs Heat → ↓ Temp</div>
@@ -1159,43 +1814,43 @@
 
             <!-- Study Tips -->
             <section class="study-tips">
-                <h3>💡 How to Study This Material</h3>
-                
+                <h3>💡 Research-Based Study Strategies</h3>
+
                 <div class="tip-grid">
                     <div class="tip-card">
                         <div class="tip-icon">📝</div>
                         <h4>Make Concept Maps</h4>
                         <p>Connect ideas visually! Draw arrows showing how atoms → molecules → bonds → reactions → properties all relate.</p>
                     </div>
-                    
+
                     <div class="tip-card">
                         <div class="tip-icon">🎨</div>
                         <h4>Draw Molecular Models</h4>
                         <p>Sketch atoms, bonds, electron transfers. Visual models help you understand WHAT'S HAPPENING at molecular level.</p>
                     </div>
-                    
+
                     <div class="tip-card">
                         <div class="tip-icon">🔄</div>
-                        <h4>Compare & Contrast</h4>
-                        <p>Make T-charts: Ionic vs Covalent, Physical vs Chemical, Exo vs Endo. Spotting differences = understanding!</p>
+                        <h4>Use Retrieval Practice</h4>
+                        <p>Test yourself WITHOUT looking at notes first. Research shows testing (not re-reading!) creates strongest learning.</p>
                     </div>
-                    
+
                     <div class="tip-card">
                         <div class="tip-icon">🌎</div>
-                        <h4>Real-World Examples</h4>
-                        <p>Connect to your life! Salt in food (ionic), water you drink (covalent), fire (exothermic), cold pack (endothermic).</p>
+                        <h4>Connect All 3 Levels</h4>
+                        <p>Always link: What you SEE → What atoms DO → How we WRITE it. This is how expert chemists think!</p>
                     </div>
-                    
+
                     <div class="tip-card">
                         <div class="tip-icon">👥</div>
                         <h4>Teach Someone Else</h4>
                         <p>Best way to learn! Explain to friend/family. If YOU can teach it, you really understand it!</p>
                     </div>
-                    
+
                     <div class="tip-card">
                         <div class="tip-icon">🔬</div>
-                        <h4>Practice Problems</h4>
-                        <p>Balance equations, identify bond types, calculate ΔT. Practice makes perfect! Review station work.</p>
+                        <h4>Visualize Atoms</h4>
+                        <p>Every concept: picture what atoms are doing. Can't visualize it? You don't understand it yet - review that section!</p>
                     </div>
                 </div>
             </section>
@@ -1203,23 +1858,26 @@
             <!-- Footer / Big Picture -->
             <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 40px; border-radius: 24px; margin-top: 50px;">
                 <h2 style="color: white; text-align: center; margin-bottom: 30px; font-size: 2.5em;">🎓 The Big Picture</h2>
-                
+
                 <div style="max-width: 1000px; margin: 0 auto;">
                     <p style="font-size: 1.3em; line-height: 1.8; text-align: center; margin-bottom: 25px;">
                         Everything in our universe is made of atoms. The way those atoms connect (bonds) determines the properties of matter. When bonds break and reform (reactions), we can harness energy to solve real problems!
                     </p>
-                    
+
                     <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 16px; margin: 30px 0;">
                         <h3 style="color: white; text-align: center; margin-bottom: 20px;">🔗 How It All Connects</h3>
                         <p style="font-size: 1.2em; line-height: 1.8;">
                             <strong>Week 1 (Atoms)</strong> taught you the building blocks. <strong>Week 2 (Bonds)</strong> showed how they stick together. <strong>Week 3 (Reactions)</strong> revealed what happens when bonds break/form. <strong>Week 4 (Engineering)</strong> let you USE chemistry to help people!
                         </p>
+                        <p style="font-size: 1.2em; line-height: 1.8; margin-top: 20px;">
+                            <strong>The Expert Habit:</strong> Always think at THREE levels - Macro (what you see), Micro (what atoms do), Symbolic (how we write it). This is the secret to understanding chemistry deeply!
+                        </p>
                     </div>
-                    
+
                     <p style="font-size: 1.25em; line-height: 1.8; text-align: center; margin-top: 30px;">
                         Understanding chemistry isn't just about memorizing formulas—it's about understanding the invisible forces that shape everything around you. From the water you drink to the phone in your hand to the food you eat, it's ALL chemistry! 🧪✨
                     </p>
-                    
+
                     <p style="font-size: 1.4em; font-weight: 700; text-align: center; margin-top: 30px; padding: 25px; background: rgba(255,255,255,0.2); border-radius: 12px;">
                         You're not just learning science—you're learning to see the world like a scientist! 🌟
                     </p>
